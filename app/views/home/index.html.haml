@@ -1,0 +1,12 @@
+%h1 約束します。
+%p もう偽リンクとはおさらば出来ると。
+- @videos.each do |video|
+  .video_contents
+    = video.title
+    = video.contents
+    = video.image_url
+    - video.movies.each do |movie|
+      = movie.iframe
+      = image_tag movie.image_url
+      = movie.url
+      = movie.supplier

@@ -3,7 +3,7 @@ class CreateMovies < ActiveRecord::Migration
     create_table :movies do |t|
       t.string :url, :null => false
       t.string :iframe, :null => false
-      t.string :image
+      t.string :image_url
       t.string :supplier
       t.integer :video_id
 

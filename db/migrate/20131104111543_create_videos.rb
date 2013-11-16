@@ -1,11 +1,11 @@
 class CreateVideos < ActiveRecord::Migration
   def change
     create_table :videos do |t|
-      t.string :title
-      t.integer :view
+      t.string :title, :null => false
+      t.integer :view, default: 0
       t.string :contents
-      t.string :image
-      t.boolean :linkgire
+      t.string :image_url
+      t.boolean :linkgire, default: false
 
       t.timestamps
     end

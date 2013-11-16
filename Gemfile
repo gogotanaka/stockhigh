@@ -7,7 +7,7 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+# gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -44,6 +44,11 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'haml'
+gem 'haml-rails'
+gem 'erb2haml'
+
+
+# 追記
 gem 'less-rails'
-gem 'twitter-bootstrap-rails'
-gem 'execjs'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20131104111715) do
   create_table "movies", force: true do |t|
     t.string   "url",        null: false
     t.string   "iframe",     null: false
-    t.string   "image"
+    t.string   "image_url"
     t.string   "supplier"
     t.integer  "video_id"
     t.datetime "created_at"
@@ -48,11 +48,11 @@ ActiveRecord::Schema.define(version: 20131104111715) do
   add_index "video_tag_relations", ["video_id"], name: "index_video_tag_relations_on_video_id"
 
   create_table "videos", force: true do |t|
-    t.string   "title"
-    t.integer  "view"
+    t.string   "title",                      null: false
+    t.integer  "view",       default: 0
     t.string   "contents"
-    t.string   "image"
-    t.boolean  "linkgire"
+    t.string   "image_url"
+    t.boolean  "linkgire",   default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

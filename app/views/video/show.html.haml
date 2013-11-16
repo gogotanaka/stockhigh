@@ -1,0 +1,10 @@
+%h1 Video#show
+
+%p Find me in app/views/video/show.html.haml
+
+= @video.title
+= @video.contents
+
+- @video.movies.each do |video|
+  = video.iframe
+- end
