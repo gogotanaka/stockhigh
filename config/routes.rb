@@ -1,4 +1,6 @@
 Stockhigh::Application.routes.draw do
+  resources :posts
+
   get "video/show"
   get "home/index"
   get "home/show"

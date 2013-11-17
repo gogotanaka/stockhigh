@@ -5,6 +5,8 @@
 = @video.title
 = @video.contents
 
-- @video.movies.each do |video|
-  = video.iframe
-- end
+- @video.movies.each do |movie|
+    = movie.iframe.html_safe
+    = image_tag movie.image_url
+    = movie.url
+    = movie.supplier
